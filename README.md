@@ -1,10 +1,10 @@
-[![License](https://img.shields.io/github/license/Addono/bull-board-docker?style=flat-square)](https://github.com/Addono/bull-board-docker/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/Addono/bull-board-docker?style=flat-square)](https://github.com/bsormagec/bull-board-docker/blob/master/LICENSE)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/badge/project%20status-Active-greengrass?style=flat-square)](https://www.repostatus.org/#active)
-![GitHub Workflow Status - Docker](https://img.shields.io/github/actions/workflow/status/Addono/bull-board-docker/docker-publish.yml?style=flat-square)
+![GitHub Workflow Status - Docker](https://img.shields.io/github/actions/workflow/status/bsormagec/bull-board-docker/docker-publish.yml?style=flat-square)
 [
-![Docker Image Pulls (all-time)](https://img.shields.io/docker/pulls/addono/bull-board?style=flat-square)
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/addono/bull-board?sort=semver&style=flat-square)
-](https://hub.docker.com/r/addono/bull-board)
+![Docker Image Pulls (all-time)](https://img.shields.io/docker/pulls/bsormagec/bull-board-arm64?style=flat-square)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/bsormagec/bull-board-arm64?sort=semver&style=flat-square)
+](https://hub.docker.com/r/bsormagec/bull-board-arm64)
 
 Docker image for [bull-board]. Allow you to monitor your bull queue without any coding!
 
@@ -13,7 +13,7 @@ Supports both: Bull and BullMQ.
 ### Quick start with Docker
 
 ```
-docker run -p 3000:3000 addono/bull-board
+docker run -p 3000:3000 bsormagec/bull-board-arm64
 ```
 will run bull-board interface on `localhost:3000` and connect to your redis instance on `localhost:6379` without password.
 
@@ -26,7 +26,7 @@ version: '3.5'
 services:
   bullboard:
     container_name: bullboard
-    image: addono/bull-board
+    image: bsormagec/bull-board-arm64
     restart: always
     ports:
       - 3000:3000
@@ -71,7 +71,7 @@ services:
 
   bullboard:
     container_name: bullboard
-    image: addono/bull-board
+    image: bsormagec/bull-board-arm64
     restart: always
     ports:
       - 3000:3000
@@ -90,3 +90,4 @@ volumes:
 ```
 
 [bull-board]: https://github.com/felixmosh/bull-board
+[bull-board-docker]: https://github.com/Addono/bull-board-docker
